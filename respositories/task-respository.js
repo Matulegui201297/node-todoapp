@@ -11,10 +11,17 @@ class TaskRepository {
     getAllTask(){
 
     }
-
-    createTask(task){
-        const task = new Task(title);
+/**
+ * 
+ * @param {String} title 
+ *
+ *  Todo: falta persistir datos en archivo
+ *
+*/
+    createTask(title){
+        const Tasks = new Task(title);
         this._tasks.push(task);
+        return this._tasks;
     }
 
     deleteTask (){
@@ -25,3 +32,5 @@ class TaskRepository {
 
     }
 }
+
+module.exports = TaskRepository
