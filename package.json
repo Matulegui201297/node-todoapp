@@ -1,0 +1,25 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matulegui201297/node-todoapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matulegui201297/node-todoapp/issues"
+  },
+  "homepage": "https://github.com/Matulegui201297/node-todoapp#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^8.2.0"
+  }
+}
