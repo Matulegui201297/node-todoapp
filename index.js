@@ -30,9 +30,7 @@ const main = async() => {
         }
     }  
     
-    while (condition !== 'X') {
-    
-    };
+    while (condition !== 'X');
 
 }
 
