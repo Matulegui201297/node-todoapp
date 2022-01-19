@@ -15,7 +15,11 @@ const menu = [
             {
                 value: 2,
                 name: `${'2-'.green} Get Task` 
-            }
+            },
+            {
+                value: 'X',
+                name: `${'X-'.yellow} Exit` 
+            },
         ]
     }
 ]
