@@ -7,8 +7,7 @@ const main = async() => {
     const taskRepository = new TaskRepository();
     let option = '';
     const condition = '';
-
-
+    
     do {
         option = await inquirerMenu ();
 
@@ -21,22 +20,19 @@ const main = async() => {
                 console.log(title);
                
                 taskRepository.createTask(title);
-    
-            break;
+            
+                break;
             case 2: 
                 //Todo: mostrar la lista de tarea de la bbdd
                 const allTask = taskRepository.getAllTask()
                 console.log(allTask);
             break;
         }
-    } 
+    }  
     
     while (condition !== 'X') {
+    };
 
-    }
-
-    
-    
 }
 
 main();

@@ -12,7 +12,12 @@ const getData = () => {
     if  (!fs.existsSync(ArchName)){
         return null;
     }
-    return JSON.parse(fs.readFileSync(ArchName, {encoding: 'utf8'}));
+    
+    const data = fs.readFileSync(ArchName, {encoding: 'utf8'});
+    if (data) {
+        return JSON.parse();
+    }
+    return null;
 
 } 
 
