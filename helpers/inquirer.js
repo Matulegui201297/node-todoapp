@@ -49,5 +49,5 @@ const inquirerInput = async (message) => {
 
 module.exports = {
     inquirerMenu,
-    inquirerInput
+    inquirerInput,
 }
