@@ -1,6 +1,15 @@
-const { inquirerMenu, inquirerInput } = require ('./helpers/inquirer');
-const TaskRepository = require ('./respositories/task-respository');
+const { 
+    inquirerMenu, 
+    inquirerInput 
+} = require ('./helpers/inquirer');
 
+const { 
+    getAllTask, 
+    createTask 
+} = require ('./services/fileService');
+
+const 
+TaskRepository = require ('./respositories/task-respository');
 
 const main = async() => {
 
@@ -13,25 +22,22 @@ const main = async() => {
 
         switch (option) {
             case 1:
-                //Todo: hacer que el usuario puedo ingresar el titulo de la tarea
-                console.log('El usuario selecciono la option crear tarea');
-               
-                const title = await inquirerInput('Task Title')
-                console.log(title);
-               
-                taskRepository.createTask(title);
-            
-                break;
+                const title = await inquirerInput('Task Title');
+                createTask(title);
+            break;
+        
             case 2: 
-                //Todo: mostrar la lista de tarea de la bbdd
-                const allTask = taskRepository.getAllTask()
-                console.log(allTask);
+                const allTask = getAllTask()
+                if (tasks.length > 0) {
+                    console.log(allTask);
+                } else {
+                    console.log("There are not task!".red);
+                }
             break;
         }
     }  
     
     while (condition !== 'X');
-
-}
+};
 
 main();
