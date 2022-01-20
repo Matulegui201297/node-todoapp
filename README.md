@@ -6,3 +6,5 @@
 * se creo comando para crear tareas
 * se creo base de datos
 * se creo comando para ver tareas
+* se agrego fileService
+* se agrego file-manager
